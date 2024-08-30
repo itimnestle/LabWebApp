@@ -22,4 +22,4 @@ Route::get('info',[informationController::class,'index']);
 Route::get('/movie',[MovieController::class,'index'])->name('movie');
 Route::get('/faculty',[FacultyController::class,'index'])->name('faculty');
 
-Route::get('/company',[companyController::class,'index'])->name('comp');
+Route::get('/hee',[companyController::class,'index'])->name('hee'.);
