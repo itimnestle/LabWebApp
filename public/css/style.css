@@ -1,0 +1,99 @@
+/* Styles for the navigation bar */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Styles for the form card */
+.card-form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.card-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.card-form input[type="text"],
+.card-form input[type="number"],
+.card-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.card-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.card-show {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.card-show h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.card-show table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card-show th,
+.card-show td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.card-show th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.card-show tr:nth-child(even) {
+    background-color: #f8f8f8;
+}

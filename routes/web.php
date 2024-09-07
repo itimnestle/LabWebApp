@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\companyController;
+use App\Http\Controllers\studentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,3 +24,5 @@ Route::get('/movie',[MovieController::class,'index'])->name('movie');
 Route::get('/faculty',[FacultyController::class,'index'])->name('faculty');
 
 Route::get('/company',[companyController::class,'index'])->name('comp');
+Route::get('/student',[studentController::class,'index'])->name('shwstd');
+Route::post('/student/insert',[studentController::class,'insert'])->name('addstd');
