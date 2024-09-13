@@ -10,16 +10,11 @@
 <body>
     <header>
         <nav>
-
-                <ul>
-                    <a href="{{ route('dashboard') }}">Home</a>
-                    <a href="{{ route('shwstd') }}" style="margin-left: 50px">Student List</a>
-
-                </ul>
-
-                </nav>
-
-
+            <ul>
+                <a href="{{ route('dashboard') }}">Home</a>
+                <a href="{{ route('shwstd') }}" >Student List</a>
+            </ul>
+        </nav>
         <h1 align="center">Student Management จำนวนนักศึกษาทั้งหมด {{ $scount }}</h1>
     </header>
     <div class="card-form">
@@ -28,26 +23,27 @@
             @csrf
             <p>Student Name: <input type="text" name="stu_name" required></p>
             <p>Age: <input type="number" name="age" required></p>
-            <p>Grade: <select name="grade" id="grade" required>
-
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="F">F</option>
-            </select>
+            <p>Grade:
+                <select name="grade" id="grade" required>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
             </p>
             <p><input type="submit" id="submit" value="Add Student"></p>
-            </form>
+        </form>
     </div>
     <div class="card-show">
         <h2>Student List</h2>
         <table>
             <tr>
                 <th>รหัสนักศึกษา</th>
-            <th>ชื่อนามสกุล</th>
-            <th>อายุ</th>
-            <th>เกรด</th>
+                <th>ชื่อนามสกุล</th>
+                <th>อายุ</th>
+                <th>เกรด</th>
+
             </tr>
             @foreach ($std as $st )
                 <tr>
@@ -55,14 +51,16 @@
                     <td>{{ $st->stu_name }}</td>
                     <td>{{ $st->age }}</td>
                     <td>{{ $st->grade}}</td>
+                    <td>
+                        <a  style=""
+                        class="btn" onclick="return confirm('Are you sure you want to delete this student?')"
+                         href="{{ route('delete', ['id' => $st->id]) }}"> Delete </a>
+                    </td>
+
                 </tr>
             @endforeach
-
         </table>
     </div>
-
-
-
 
 </body>
 </html>

@@ -28,4 +28,9 @@ class studentController extends Controller
         $std->save();
        return redirect()->back();
     }
+
+    function delete($id){
+       $delete = student::destroy($id);
+        return redirect()->back();
+    }
 }
