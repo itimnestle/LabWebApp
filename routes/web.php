@@ -27,3 +27,5 @@ Route::get('/company',[companyController::class,'index'])->name('comp');
 Route::get('/student',[studentController::class,'index'])->name('shwstd');
 Route::post('/student/insert',[studentController::class,'insert'])->name('addstd');
 Route::get('/student/delete/{id}',[studentController::class,'delete'])->name('delete');
+Route::get('/students/{id}',[studentController::class,'update'])->name('update');
+Route::post('/students/updated',[studentController::class,'updated'])->name('updated');

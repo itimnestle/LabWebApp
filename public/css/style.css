@@ -30,12 +30,19 @@ nav a:hover {
     background-color: #777;
 }
 
-.btn{
+.debtn{
     color: white;
     padding: 5px 20px;
     border-radius: 5px;
     text-decoration: none;
     background-color: #f87f76;
+}
+
+.upbtn{
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+
 }
 
 .card-form {

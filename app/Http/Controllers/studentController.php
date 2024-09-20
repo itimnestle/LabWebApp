@@ -29,6 +29,24 @@ class studentController extends Controller
        return redirect()->back();
     }
 
+
+    function update(Request $request,$id){
+        $std = Student::all();
+        $stds = student::where('id',$id)->first();
+        return view('student',compact('stds' , 'std'));
+    }
+
+    function updated(Request $request){
+        $stds = student::where('id',$request->id)->first();
+        $stds->stu_name = $request->stu_name;
+        $stds->age = $request->age;
+        $stds->grade = $request->grade;
+        $stds->save();
+        return redirect()->back();
+    }
+
+
+
     function delete($id){
        $delete = student::destroy($id);
         return redirect()->back();
